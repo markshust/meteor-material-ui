@@ -1,6 +1,6 @@
 Package.describe({
   name: 'markoshust:material-ui',
-  version: '0.13.1_2',
+  version: '0.13.1_3',
   summary: 'Package that contains the React implementation of Google Material Design',
   git: 'https://github.com/markoshust/meteor-material-ui',
   documentation: 'README.md'

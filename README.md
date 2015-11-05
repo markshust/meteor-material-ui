@@ -2,7 +2,7 @@
 
 ## Add Google's Material Design Library to Meteor
 
-`meteor add markoshust:material-design`
+`meteor add markoshust:material-ui`
 
 Pulls library from the official React implementation of Google Material Design at <a href="https://www.npmjs.com/package/material-ui" target="_blank">`material-ui` NPM repo</a> and uses Meteor's built-in `react` package. Also, automatically runs `injectTapEventPlugin()` at startup. This package also exposes material-ui to the server for SSR support.
 

@@ -24,17 +24,16 @@ Home = React.createClass({
     ];
   },
 
-  handleTouchTap() {
-    this.refs.leftNav.toggle();
-  },
-
   render() {
     return (
       <div className="home">
-        <LeftNav ref="leftNav" docked={false} menuItems={this.getMenuItems()} />
+        <LeftNav
+          ref="leftNav"
+          docked={false}
+          menuItems={this.getMenuItems()} />
         <AppBar
           title="Home"
-          onLeftIconButtonTouchTap={this.handleTouchTap}
+          onLeftIconButtonTouchTap={()=>this.refs.leftNav.toggle()}
           iconElementRight={
             <IconMenu
               iconButtonElement={

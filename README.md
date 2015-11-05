@@ -11,10 +11,17 @@ Pulls library from the official React implementation of Google Material Design a
 Create a component, and import desired components using the following format:
 
 ```
-const { AppBar, IconMenu, IconButton, LeftNav } = mui;
-const { NavigationMoreVert } = mui.Icons;
-
 Home = React.createClass({
+
+  childContextTypes : {
+    muiTheme: React.PropTypes.object
+  },
+
+  getChildContext() {
+    return {
+      muiTheme: mui.Styles.ThemeManager.getMuiTheme(mui.Styles.LightRawTheme)
+    };
+  },
 
   getMenuItems() {
     return [
@@ -27,19 +34,19 @@ Home = React.createClass({
   render() {
     return (
       <div className="home">
-        <LeftNav
+        <mui.LeftNav
           ref="leftNav"
           docked={false}
           menuItems={this.getMenuItems()} />
-        <AppBar
+        <mui.AppBar
           title="Home"
           onLeftIconButtonTouchTap={()=>this.refs.leftNav.toggle()}
           iconElementRight={
-            <IconMenu
+            <mui.IconMenu
               iconButtonElement={
-                <IconButton>
-                  <NavigationMoreVert />
-                </IconButton>
+                <mui.IconButton>
+                  <mui.Icons.NavigationMoreVert />
+                </mui.IconButton>
               } />
           } />
       </div>

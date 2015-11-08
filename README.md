@@ -41,6 +41,7 @@ App = React.createClass({
         <mui.AppBar
           title="Home"
           onLeftIconButtonTouchTap={()=>this.refs.leftNav.toggle()}
+          style={{backgroundColor: mui.Styles.Colors.deepOrange300}}
           iconElementRight={
             <mui.IconMenu
               iconButtonElement={

@@ -48,7 +48,10 @@ App = React.createClass({
                 <mui.IconButton>
                   <mui.SvgIcons.NavigationMoreVert />
                 </mui.IconButton>
-              } />
+              } > 
+              <mui.Menus.MenuItem primaryText="Help" index={1} />
+              <mui.Menus.MenuItem primaryText="Sign out" index={2} />
+            </mui.IconMenu>
           } />
       </div>
     );  

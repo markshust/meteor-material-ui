@@ -1,6 +1,6 @@
 Package.describe({
   name: 'markoshust:material-ui',
-  version: '0.13.1_3',
+  version: '0.13.1_4',
   summary: 'Package that contains the React implementation of Google Material Design',
   git: 'https://github.com/markoshust/meteor-material-ui',
   documentation: 'README.md'
@@ -15,10 +15,10 @@ Npm.depends({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use([
-    'cosmos:browserify@0.8.1',
-    'ecmascript@0.1.6',
-    'jsx@0.2.3',
-    'react@0.14.1_1'
+    'ecmascript',
+    'jsx',
+    'react',
+    'cosmos:browserify'
   ]);
   api.addFiles([
     'app.browserify.js',
@@ -26,8 +26,8 @@ Package.onUse(function(api) {
     'startup.js'
   ]);
   api.export([
-    'injectTapEventPlugin',
-    'MoreVert',
-    'mui'
+    'mui',
+    'injectTapEventPlugin'
   ]);
 });
+

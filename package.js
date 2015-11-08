@@ -24,7 +24,7 @@ Package.onUse(function(api) {
     'app.browserify.js',
     'app.browserify.options.json',
     'startup.js'
-  ]);
+  ], 'client');
   api.export([
     'mui',
     'injectTapEventPlugin'

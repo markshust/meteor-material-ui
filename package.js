@@ -15,10 +15,10 @@ Npm.depends({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use([
-    'ecmascript',
-    'jsx',
-    'react',
-    'cosmos:browserify'
+    'ecmascript@0.1.6',
+    'jsx@0.2.3',
+    'react-runtime@0.14.1_1',
+    'cosmos:browserify@0.8.1'
   ]);
   api.addFiles([
     'app.browserify.js',

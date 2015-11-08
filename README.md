@@ -11,7 +11,7 @@ Pulls library from the official React implementation of Google Material Design a
 Create a component, and import desired components using the following format:
 
 ```
-Home = React.createClass({
+App = React.createClass({
 
   childContextTypes : {
     muiTheme: React.PropTypes.object
@@ -33,7 +33,7 @@ Home = React.createClass({
 
   render() {
     return (
-      <div className="home">
+      <div className="app">
         <mui.LeftNav
           ref="leftNav"
           docked={false}
@@ -41,18 +41,26 @@ Home = React.createClass({
         <mui.AppBar
           title="Home"
           onLeftIconButtonTouchTap={()=>this.refs.leftNav.toggle()}
+          style={{backgroundColor: mui.Styles.Colors.deepOrange300}}
           iconElementRight={
             <mui.IconMenu
               iconButtonElement={
                 <mui.IconButton>
-                  <mui.Icons.NavigationMoreVert />
+                  <mui.SvgIcons.NavigationMoreVert />
                 </mui.IconButton>
-              } />
+              } > 
+              <mui.Menus.MenuItem primaryText="Help" index={1} />
+              <mui.Menus.MenuItem primaryText="Sign out" index={2} />
+            </mui.IconMenu>
           } />
       </div>
-    )
+    );  
   }
 
+});
+
+Meteor.startup(function () {
+  ReactDOM.render(<App />, document.getElementById('app'));
 });
 ```
 

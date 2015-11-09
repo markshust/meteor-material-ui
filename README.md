@@ -11,15 +11,20 @@ Pulls library from the official React implementation of Google Material Design a
 Create a component, and import desired components using the following format:
 
 ```
-App = React.createClass({
+const { AppBar, IconButton, IconMenu, LeftNav } = mui;
+const { MenuItem } = mui.Menus;
+const { NavigationMoreVert } = mui.SvgIcons;
+const Styles = mui.Styles;
+const Colors = Styles.Colors;
 
+App = React.createClass({
   childContextTypes : {
     muiTheme: React.PropTypes.object
   },
 
   getChildContext() {
     return {
-      muiTheme: mui.Styles.ThemeManager.getMuiTheme(mui.Styles.LightRawTheme)
+      muiTheme: Styles.ThemeManager.getMuiTheme(Styles.LightRawTheme)
     };
   },
 
@@ -34,29 +39,28 @@ App = React.createClass({
   render() {
     return (
       <div className="app">
-        <mui.LeftNav
+        <LeftNav
           ref="leftNav"
           docked={false}
           menuItems={this.getMenuItems()} />
-        <mui.AppBar
+        <AppBar
           title="Home"
           onLeftIconButtonTouchTap={()=>this.refs.leftNav.toggle()}
-          style={{backgroundColor: mui.Styles.Colors.deepOrange300}}
+          style={{backgroundColor: Colors.deepOrange300}}
           iconElementRight={
-            <mui.IconMenu
+            <IconMenu
               iconButtonElement={
-                <mui.IconButton>
-                  <mui.SvgIcons.NavigationMoreVert />
-                </mui.IconButton>
-              } > 
-              <mui.Menus.MenuItem primaryText="Help" index={1} />
-              <mui.Menus.MenuItem primaryText="Sign out" index={2} />
-            </mui.IconMenu>
+                <IconButton>
+                  <NavigationMoreVert />
+                </IconButton>
+              } >
+              <MenuItem primaryText="Help" index={1} />
+              <MenuItem primaryText="Sign out" index={2} />
+            </IconMenu>
           } />
       </div>
-    );  
+    );
   }
-
 });
 
 Meteor.startup(function () {

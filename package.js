@@ -1,6 +1,6 @@
 Package.describe({
   name: 'markoshust:material-ui',
-  version: '0.13.1_5',
+  version: '0.13.2',
   summary: 'Package that contains the React implementation of Google Material Design',
   git: 'https://github.com/markoshust/meteor-material-ui',
   documentation: 'README.md'
@@ -8,7 +8,7 @@ Package.describe({
 
 Npm.depends({
   'externalify': '0.1.0',
-  'material-ui': '0.13.1',
+  'material-ui': '0.13.2',
   'react-tap-event-plugin': '0.2.1'
 });
 

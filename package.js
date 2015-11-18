@@ -1,6 +1,6 @@
 Package.describe({
   name: 'markoshust:material-ui',
-  version: '0.13.2_1',
+  version: '0.13.2_2',
   summary: 'Package that contains the React implementation of Google Material Design',
   git: 'https://github.com/markoshust/meteor-material-ui',
   documentation: 'README.md'
@@ -24,7 +24,7 @@ Package.onUse(function(api) {
     'app.browserify.js',
     'app.browserify.options.json',
     'startup.js'
-  ], 'client');
+  ], ['client', 'server']);
   api.export([
     'mui',
     'injectTapEventPlugin'

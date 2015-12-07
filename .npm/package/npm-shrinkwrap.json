@@ -155,7 +155,7 @@
       }
     },
     "material-ui": {
-      "version": "0.13.3",
+      "version": "0.13.4",
       "dependencies": {
         "inline-style-prefixer": {
           "version": "0.5.4",
@@ -288,30 +288,6 @@
                   "version": "1.0.2"
                 }
               }
-            }
-          }
-        },
-        "history": {
-          "version": "1.13.1",
-          "dependencies": {
-            "deep-equal": {
-              "version": "1.0.1"
-            },
-            "invariant": {
-              "version": "2.1.2",
-              "dependencies": {
-                "loose-envify": {
-                  "version": "1.1.0",
-                  "dependencies": {
-                    "js-tokens": {
-                      "version": "1.0.2"
-                    }
-                  }
-                }
-              }
-            },
-            "qs": {
-              "version": "4.0.0"
             }
           }
         }

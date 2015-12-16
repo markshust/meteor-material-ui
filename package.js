@@ -1,14 +1,17 @@
 Package.describe({
-  name: 'markoshust:material-ui',
-  version: '0.13.4',
-  summary: 'Package that contains the React implementation of Google Material Design',
-  git: 'https://github.com/markoshust/meteor-material-ui',
+  name: 'dcsan:material-ui',
+  version: '0.14.0',
+  summary: 'React + Material Design. using mui 0.14.0-rc2',
+  git: 'https://github.com/dcsan/meteor-material-ui',
   documentation: 'README.md'
 });
 
+// https://github.com/callemall/material-ui/blob/master/package.json
+// https://github.com/callemall/material-ui/blob/master/CHANGELOG.md
+
 Npm.depends({
   'externalify': '0.1.0',
-  'material-ui': '0.13.4',
+  'material-ui': '0.14.0-rc2',
   'react-tap-event-plugin': '0.2.1'
 });
 

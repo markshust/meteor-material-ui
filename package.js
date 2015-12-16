@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'dcsan:material-ui',
+  name: 'dcsan:mui',
   version: '0.14.0',
   summary: 'React + Material Design. using mui 0.14.0-rc2',
   git: 'https://github.com/dcsan/meteor-material-ui',

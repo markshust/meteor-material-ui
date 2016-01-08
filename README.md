@@ -60,17 +60,19 @@ App = React.createClass({
                 <IconButton>
                   <NavigationMoreVert />
                 </IconButton>
-              } >
+              }
+            >
               <MenuItem primaryText="Help" index={1} />
               <MenuItem primaryText="Sign out" index={2} />
             </IconMenu>
-          } />
+          }
+        />
       </div>
     );
   }
 });
 
-Meteor.startup(function () {
+Meteor.startup(() => {
   ReactDOM.render(<App />, document.getElementById('app'));
 });
 ```

@@ -155,7 +155,7 @@
       }
     },
     "material-ui": {
-      "version": "0.14.1",
+      "version": "0.14.2",
       "dependencies": {
         "inline-style-prefixer": {
           "version": "0.5.4",

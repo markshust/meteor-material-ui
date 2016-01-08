@@ -22,30 +22,37 @@ App = React.createClass({
     muiTheme: React.PropTypes.object
   },
 
+  getInitialState() {
+    return {
+      open: false
+    };
+  },
+
   getChildContext() {
     return {
       muiTheme: Styles.ThemeManager.getMuiTheme(Styles.LightRawTheme)
     };
   },
 
-  getMenuItems() {
-    return [
-      { route: "home", text: "Home" },
-      { route: "feature", text: "Feature" },
-      { route: "contact", text: "Contact" }
-    ];
+  handleToggle() {
+    this.setState({open: ! this.state.open});
   },
 
   render() {
     return (
       <div className="app">
         <LeftNav
-          ref="leftNav"
           docked={false}
-          menuItems={this.getMenuItems()} />
+          open={this.state.open}
+          onRequestChange={open => this.setState({open})}
+        >
+          <MenuItem linkButton={true} href="/home" primaryText="Home" index={1} onTouchTap={this.handleToggle}/>
+          <MenuItem linkButton={true} href="/feature" primaryText="Feature" index={2} onTouchTap={this.handleToggle}/>
+          <MenuItem linkButton={true} href="/contact" primaryText="Contact" index={3} onTouchTap={this.handleToggle}/>
+        </LeftNav>
         <AppBar
           title="Home"
-          onLeftIconButtonTouchTap={()=>this.refs.leftNav.toggle()}
+          onLeftIconButtonTouchTap={this.handleToggle}
           style={{backgroundColor: Colors.deepOrange300}}
           iconElementRight={
             <IconMenu
